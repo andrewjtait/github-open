@@ -21,3 +21,13 @@ github-open currently supports the following commands:
 * `github compare branch_name` opens GitHub branch comparison with `branch_name`
 * `github pr` opens a GitHub pull request against `master`
 * `github pr branch_name` opens a GitHub pull request against `branch_name`
+
+## Troubleshooting
+
+After installation you will either need to reload your `.bash_profile`:
+
+```sh
+source ~/.bash_profile
+```
+
+or open a new session in your terminal.
