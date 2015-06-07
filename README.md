@@ -1,6 +1,6 @@
 # github-open
 
-Bash function to quickly open GitHub.com in your browser to the relevant URL based on the current git repository and branch.
+Bash function to quickly open www.github.com in your browser to the relevant URL based on the current git repository and branch.
 
 ## Installation:
 
@@ -14,7 +14,7 @@ Clone this repository and add the following line to your `.bash_profile`:
 
 ## Usage:
 
-github-open currently support the following commands:
+github-open currently supports the following commands:
 
 * `github` opens GitHub repository and branch
 * `github compare` opens GitHub branch comparison with `master`
