@@ -1,4 +1,6 @@
-function github {
+#!/bin/bash
+
+github() {
   branch="$(git rev-parse --abbrev-ref HEAD)"
   url="$(git config --get remote.origin.url)"
   url=${url/git@github.com:/http://github.com/}
