@@ -7,6 +7,9 @@ github() {
   url=${url/git@github.com:/http://github.com/}
   url=${url/.git/}
 
+  # stop script if not a git repo
+  if [[ $url == "" ]]; then return; fi
+
   # define the possible actions
   if [[ $1 =~ "compare" ]]; then action="compare"
   elif [[ $1 =~ "pr" ]]; then action="pull"
