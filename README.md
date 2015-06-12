@@ -9,6 +9,7 @@ github-open currently supports the following commands:
 * `github` opens GitHub repository and branch
 * `github compare` opens GitHub branch comparison with `master`
 * `github compare branch_name` opens GitHub branch comparison with `branch_name`
+* `github help` displays information on how to use the script
 * `github pr` opens a GitHub pull request against `master`
 * `github pr branch_name` opens a GitHub pull request against `branch_name`
 

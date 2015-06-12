@@ -1,6 +1,20 @@
 #!/bin/bash
 
 github() {
+  # if `github help` is called then display information on how to use the script
+  if [[ $1 =~ "help" ]]; then
+    echo "Bash function to quickly open https://www.github.com in your browser to the relevant URL based on the current git repository and branch.
+
+Available commands are:
+  github                      opens GitHub repository and branch
+  github compare              opens GitHub branch comparison with \`master\`
+  github compare branch_name  opens GitHub branch comparison with \`branch_name\`
+  github help                 shows help
+  github pr                   opens a GitHub pull request against \`master\`
+  github pr branch_name       opens a GitHub pull request against \`branch_name\`"
+    return;
+  fi
+
   # retrieve info from git
   branch="$(git rev-parse --abbrev-ref HEAD)"
   url="$(git config --get remote.origin.url)"
@@ -9,22 +23,6 @@ github() {
 
   # stop script if not a git repo
   if [[ $url == "" ]]; then return; fi
-
-  if [[ $1 =~ "help" ]]; then
-    echo "
-Bash function to quickly open https://www.github.com in your browser to the relevant URL based on the current git repository and branch.
-
-Available commands are:
-
-  github                      opens GitHub repository and branch
-  github compare              opens GitHub branch comparison with \`master\`
-  github compare branch_name  opens GitHub branch comparison with \`branch_name\`
-  github help                 shows help
-  github pr                   opens a GitHub pull request against \`master\`
-  github pr branch_name       opens a GitHub pull request against \`branch_name\`
-"
-    return;
-  fi
 
   # define the possible actions
   if [[ $1 =~ "compare" ]]; then action="compare"
