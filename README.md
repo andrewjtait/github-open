@@ -30,6 +30,13 @@ You can easily uninstall using:
 brew uninstall github-open
 ```
 
+#### Upgrading using Homebrew
+
+```sh
+brew update
+brew upgrade github-open
+```
+
 ### Manual Installation
 
 Clone this repository and add the following line to your `.bash_profile`:
