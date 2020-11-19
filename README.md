@@ -15,6 +15,8 @@ github-open currently supports the following commands:
 
 ## Installation:
 
+This requires bash-completion to be installed: https://sourabhbajaj.com/mac-setup/BashCompletion/
+
 ### Homebrew
 
 The easiest method to install is using [Homebrew](http://brew.sh):
